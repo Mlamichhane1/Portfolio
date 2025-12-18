@@ -16,7 +16,6 @@ const NavLink = ({ href, children }) => (
 export default function App() {
   const base = import.meta.env.BASE_URL;
 
-  // ====== EDIT THESE ONCE ======
   const profile = useMemo(
     () => ({
       name: "Madhav",
@@ -112,7 +111,7 @@ export default function App() {
     [base]
   );
 
-  // ====== SLIDER STATE ======
+  // SLIDER STATE 
   const [index, setIndex] = useState(0);
   const prev = () => setIndex((i) => (i - 1 + projects.length) % projects.length);
   const next = () => setIndex((i) => (i + 1) % projects.length);
